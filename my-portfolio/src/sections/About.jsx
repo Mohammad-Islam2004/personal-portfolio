@@ -5,8 +5,8 @@ import p from "../assets/p.png"
 const About = () => {
   const stats = [
     { label: "Experience", value: "Fresher" },
-    { label: "Domain", value: "Full Stack" },
-    { label: "Focus", value: "Performance & UX" },
+    { label: "Domain", value: "Data Scientist" },
+    { label: "Focus", value: "Accuracy & Precision" },
   ]
 
   const glows = [
@@ -52,16 +52,12 @@ const About = () => {
               Mohammad Islam
             </h2>
             <p className="mt-2 text-lg sm:text-xl text-white/90 font-semibold">
-              Computer Science Engineer & AI Enthusiast
+              Data Scientist & AI/ML Enthusiast
             </p>
             <p className="mt-4 text-gray-300 leading-relaxed text-justify sm:text-lg lg:max-w-2xl md:max-w-3xl">
-              I build scalable, modern applications with a strong focus on clean
-              architecture, delightful UX and performance. My toolkit spans
-              React, Redux, NodeJs, Tailwind CSS and restfulAPI - bringing ideas
-              to life from concept to production with robust APIs and smooth
-              interface.
+              A <i><b>Computer Science Engineering</b></i> graduate passionate in Data Scientist and AI/ML Engineer with expertise in analyzing complex datasets, building predictive models, and deriving actionable insights. Powered by a strong foundation in mathematics, statistics, and programming.
             </p>
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl">
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl">
               {stats.map((item, i) => (
                 <motion.div
                   key={i}
@@ -104,15 +100,10 @@ const About = () => {
             About Me
           </h3>
           <p className="text-gray-300 leading-relaxed text-justify sm:text-lg">
-            Motivated and detail-oriented web developer with hands-on experience
-            in HTML, CSS, and JavaScript, React focused on building responsive
-            and user-friendly web applications. Currently expanding skill on
-            Node.js, Express, and MongoDB to grow into a full-stack developer.
+            Motivated and detail-oriented Data Scientist with a strong foundation in machine learning, data analysis, and statistical modeling. Skilled in Python, R, SQL, and various data visualization tools, I am passionate about transforming raw data into actionable insights that drive business decisions.
           </p>
           <p className="text-gray-300 leading-relaxed text-justify sm:text-lg">
-            Strong foundation in frontend fundamentals, problem-solving, and
-            continuous learning, with a passion for creating clean UI and
-            scalable web solutions.
+            Strong foundation in mathematics, statistics, and programming, I thrive on solving challenging problems and uncovering patterns that drive informed decision-making. My goal is to leverage data-driven insights to create innovative solutions that positively impact businesses and society.
           </p>
           </div>
         </motion.div>

@@ -18,7 +18,7 @@ const glowVarients = {
 
 const Home = () => {
 
-  const roles = useMemo(() => ['Web Developer', 'Full Stack Developer', 'React Developer'],[])
+  const roles = useMemo(() => ['Data Scientist', 'AI/ML Engineer', 'Data Analyst', 'Power BI Developer'],[])
 
   const [index, setIndex] = React.useState(0)
   const [subIndex, setSubIndex] = React.useState(0)
@@ -99,7 +99,7 @@ const Home = () => {
             animate={{opacity:1, y:0}}
             transition={{delay:0.5, duration:0.8}}
             >
-              MERN Stack Developer skilled in creating scalable web applications with React, Node.js, and MongoDB.
+              I am a passionate Data Scientist and AI/ML Engineer with expertise in analyzing complex datasets, building predictive models, and deriving actionable insights.
             </motion.p>
             <motion.div className='mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6'
             initial={{opacity:0}}
