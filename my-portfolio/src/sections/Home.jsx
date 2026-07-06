@@ -6,7 +6,7 @@ import AVATAR from '../assets/avator2.png'
 
 const socials = [
   {Icon: FaWhatsapp  , label: "Whatsapp", color: 'text-green-700', href: 'https://wa.me/917877167630'},
-  {Icon: FaLinkedinIn , label: "LinkedIn", color: 'text-blue-700', href: 'www.linkedin.com/in/mohammad-islam-khan-1615293a9' },
+  {Icon: FaLinkedinIn , label: "LinkedIn", color: 'text-blue-700', href: 'https://www.linkedin.com/in/mohammad-islam-khan-1615293a9' },
   {Icon: FaGithub, label: "Github", color: 'text-white', href: 'https://github.com/Mohammad-Islam2004'}
 ]
 
@@ -18,7 +18,13 @@ const glowVarients = {
 
 const Home = () => {
 
-  const roles = useMemo(() => ['Data Scientist', 'AI/ML Engineer', 'Data Analyst', 'Power BI Developer'],[])
+  // Focused Data Science & AI/ML roles
+  const roles = useMemo(() => [
+    'Data Scientist',
+    'AI/ML Engineer',
+    'Data Analyst',
+    'Power BI Developer'
+  ], [])
 
   const [index, setIndex] = React.useState(0)
   const [subIndex, setSubIndex] = React.useState(0)
@@ -67,21 +73,21 @@ const Home = () => {
       <div className='relative z-10 w-full h-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2'>
         <div className='flex flex-col justify-center h-full text-center lg:text-left relative lg:ml-20 lg:mt-2.5'>
           <div className='w-full lg:pr-24 mx-auto max-w-3xl'>
-            <motion.div className='mb-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide min-h-[1.6em]'
+            <motion.div className='mt-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wide min-h-[1.6em]'
             initial={{opacity:0, y:12}}
             animate={{opacity:1, y:0}}
             transition={{duration:0.6}}
             >
-              <span>
+              <span className='text-transparent bg-clip-text bg-linear-to-r from-amber-300 via-orange-300 to-rose-500'>
                 {roles[index].substring(0, subIndex)}
               </span>
               <span
               className='inline-block w-1 ml-1 bg-white animate-pulse align-middle'
               style={{height: '1em'}}
               >
-
               </span>
             </motion.div>
+            
             <motion.h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] drop-shadow-lg'
             initial={{opacity:0, y:40}}
             animate={{opacity:1, y:0}}
@@ -89,18 +95,21 @@ const Home = () => {
             >
               Hello, I'm
               <br/>
-              <span className='text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:whitespace-nowrap'>
-              Mohammad Islam
+              <span className='text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:whitespace-nowrap mt-1.5'>
+                Mohammad Islam
               </span>
             </motion.h1>
+
+            {/* Core Data Science & AI specific summary */}
             <motion.p
-            className='mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0'
+            className='mt-4 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed'
             initial={{opacity:0, y:30}}
             animate={{opacity:1, y:0}}
             transition={{delay:0.5, duration:0.8}}
             >
-              I am a passionate Data Scientist and AI/ML Engineer with expertise in analyzing complex datasets, building predictive models, and deriving actionable insights.
+              Specializing in the development of intelligent systems, machine learning architectures, and predictive pipelines. I translate complex data ecosystems into highly actionable insights and robust, data-driven solutions.
             </motion.p>
+            
             <motion.div className='mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6'
             initial={{opacity:0}}
             animate={{opacity:1}}
@@ -113,6 +122,7 @@ const Home = () => {
               className='px-6 py-3 rounded-full font-medium text-lg text-black bg-white hover:bg-gray-200 shadow-lg transition-all hover:scale-105'
               >My Resume</a>
             </motion.div>
+            
             <div className='mt-10 flex items-center gap-5 text-2xl md:text-3xl justify-center lg:justify-start'>
               {
                 socials.map(({Icon, label, color, href}) => (
@@ -138,20 +148,20 @@ const Home = () => {
         </div>
 
         <div className='relative hidden lg:block'>
-        <div
-  className='absolute top-10 pointer-events-none'
-  style={{
-    right: "230px", 
-    width: "min(20vw, 410px)", 
-    height: 'min(35vw, 760px)', 
-    borderRadius: '50%',
-    filter: 'blur(35px)',
-    opacity: 0.32,
-    background: 'conic-gradient(from 0deg, #fef08a, #00bf8f, #302b63, #fef08a)',
-    zIndex: -1
-  }}
-/>
-          <motion.img src={AVATAR} alt='Mohammad. Islam'
+          <div
+            className='absolute top-10 pointer-events-none'
+            style={{
+              right: "230px", 
+              width: "min(20vw, 410px)", 
+              height: 'min(35vw, 760px)', 
+              borderRadius: '50%',
+              filter: 'blur(35px)',
+              opacity: 0.32,
+              background: 'conic-gradient(from 0deg, #fef08a, #00bf8f, #302b63, #fef08a)',
+              zIndex: -1
+            }}
+          />
+          <motion.img src={AVATAR} alt='Mohammad Islam'
             className='absolute top-10 object-contain select-none pointer-events-none'
             style={{
               right: "100px", width: "min(45vw, 780px)", maxHeight: '80vh'
