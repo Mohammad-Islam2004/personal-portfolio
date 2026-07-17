@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useMemo } from "react"
 import img1 from "../assets/img1.png"
 import img2 from "../assets/img2.png"
-import img3 from "../assets/img3.JPG"
+import img3 from "../assets/img3.png"
 import photo1 from "../assets/photo1.png"
 import photo2 from "../assets/photo2.PNG"
 import photo3 from "../assets/photo3.png"
@@ -46,18 +46,18 @@ const Project = () => {
         category: ["Machine Learning", "Python"],
       },
       {
+        title: "Banking System",
+        link: "https://bank-management-python.streamlit.app/",
+        bgColor: "#0D5C6A",
+        image: isMobile ? photo3 : img3,
+        category: ["Python"],
+      },
+      {
         title: "Expense Wise",
         link: "https://expense-wise-frontend.onrender.com/",
         bgColor: "#1a3c1f",
         image: isMobile ? photo2 : img2,
         category: ["Python"],
-      },
-      {
-        title: "Hungry Tiger",
-        link: "https://www.eathungrytiger.com/",
-        bgColor: "#dc9317",
-        image: isMobile ? photo3 : img3,
-        category: ["PowerBI"],
       },
     ],
     [isMobile],
